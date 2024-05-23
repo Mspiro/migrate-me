@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Migrate Me",
+  "version": "1.0",
+  "description": "Extracts data from Drupal content edit forms",
+  "permissions": ["activeTab", "downloads", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["./content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
